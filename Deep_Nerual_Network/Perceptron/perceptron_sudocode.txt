@@ -1,0 +1,10 @@
+1. Start with randam Weights, W1,...Wn b
+2. For Every Misclassified Points (x1....Xn)
+	2.1 if prediction =0:
+		-For i =i ...n
+			-Change Wi to Wi + learning_rate Xi
+		-Chagne b to b + alpha
+	2.2 if predication =1:
+		-For i =i  ...n
+			-Change Wi to Wi - learning_rate Xi
+		-Change b to b-a
