@@ -11,15 +11,15 @@ int main( int argc, char ** argv ) {
 		{1, 1, 1, 1, 0},
 		{0, 1, 1, 1, 1}
 	};
-		cout << "Input" << endl ;
-	for (int i=0 ; i<4; i++){
-		for( int j =0; j<5 ; j++)
-		{
-			cout << a[i][j]<<", ";
-		}
-		cout <<"\n" ;
-	}
-	cout << "Output" << endl ;
+	// 	cout << "Input" << endl ;
+	// for (int i=0 ; i<4; i++){
+	// 	for( int j =0; j<5 ; j++)
+	// 	{
+	// 		cout << a[i][j]<<", ";
+	// 	}
+	// 	cout <<"\n" ;
+	// }
+	// cout << "Output" << endl ;
 	for (int i=0 ; i<4; i++){
 		for( int j=0; j<5 ; j++)
 		{
