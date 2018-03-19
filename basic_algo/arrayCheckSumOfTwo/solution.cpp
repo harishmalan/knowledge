@@ -13,9 +13,7 @@ public:
             auto th = map.find(comp);
             if (th != map.end()) return {map[comp],i};
             map.insert({it, i});
-            i++;
-    }   
-    //return {0,0};
+            i++;}   
     throw exception();
 }
 };
