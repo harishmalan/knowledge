@@ -27,9 +27,9 @@ int main(int argc, char ** argv)
 				{
 					mat[i][j] = max(mat[i-1][j],mat[i][j-1]);
 				}
-			//cout << mat[i][j] << ",";
+			cout << mat[i][j] << ",";
 		}
-		//cout <<endl;
+		cout <<endl;
 	}
 	cout << "logest Subsequence is :" << mat[n-1][m-1]<<endl;
 }

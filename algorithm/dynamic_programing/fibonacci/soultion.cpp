@@ -9,21 +9,21 @@ int fib(const int n)
 	return (fib(n-1) + fib(n-2));
 }
 
-int fib_dyna(int n)
+int fib_dyna(int n, int *fib)
 {
 	if (n <= 1) return 1;
-	double *fib = new double[n];
 	fib[0] = 0;
 	fib[1] = 1;
 	for (int i=2; i <= n; i++)
 		{
-		fib[i]=fib[i-1]+fib[i-2];
+		fib[i]=fib_dyna([i-1], fib)+fib_dyna([i-2],fib);
 		}
     return fib[n];
 }
 
 int main(int argc, char ** argv)
 {
-	cout << fib_dyna(50) << endl;
+	int new *fib = new[50];
+	cout << fib_dyna(50, fib) << endl;
 	return 0;
 }

@@ -8,7 +8,7 @@ int main( int argc, char ** argv )
 	vector<int> v;
 	int x=0, y=0,z=0;
     puts("Hello, World!");
-    int array_1[]={2,3,6,7,10,13};
+    int array_1[]={2,36,,7,10,13};
     int array_2[]={3,6,9,11,13,14};
     int array_3[]={5,6.10,11,13,15};
     while (x<4 || y<4 ||z<4 ) 

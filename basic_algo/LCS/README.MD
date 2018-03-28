@@ -13,7 +13,7 @@ M[0,j] <- 0
 for i<-1 to m
 	for j<-1 to n
 	  if s_i = s_j
-	    M[i,j] <- M[i,j]+1
+	    M[i,j] <- M[i-1,j-1]+1
 	  else:
 	  	M[i,j]<- Max {M[i-1,j], M[i,j-1]}
 
