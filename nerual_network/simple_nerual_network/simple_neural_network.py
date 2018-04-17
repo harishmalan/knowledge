@@ -3,9 +3,42 @@ import numpy as np
 def sigmoid(x):
 	return 1 / (1 + np.exp(-x))
 
+#derivate of sigmoid function
+def sigmoid_prime(x):
+	return sigmoid(x) * (1 - sigmoid(x))
 
-inputs = np.array([0.7, -0.3])
-weight = np.array([0.1, 0.8])
-bias = -0.1
-output = sigmoid(np.dot(weight, inputs)+bias)
-print(f'output{output}')
+
+x = np.array([0.1, 0.3])
+weights = np.array([-0.8, 0.5])
+bias =  0#-0.1
+#target
+y= 0.2
+
+learnrate = 0.5
+# the linear combination performed by the node (h in f(h) and f'(h))
+h = x[0]*weights[0] + x[1]*weights[1]
+# or h = np.dot(x, weights)
+
+# The neural network output (y-hat)
+nn_output = sigmoid(h)
+
+# output error (y - y-hat)
+error = y - nn_output
+
+# output gradient (f'(h))
+output_grad = sigmoid_prime(h)
+
+# error term (lowercase delta)
+error_term = error * output_grad
+
+# Gradient descent step 
+del_w = [ learnrate * error_term * x[0],
+          learnrate * error_term * x[1]]
+# or del_w = learnrate * error_term * x
+# 
+# print('Neural Network output:')
+print(nn_output)
+print('Amount of Error:')
+print(error)
+print('Change in Weights:')
+print(del_w)
